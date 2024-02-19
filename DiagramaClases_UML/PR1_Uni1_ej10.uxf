@@ -1,0 +1,57 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>60</y><w>300</w><h>90</h></coordinates><panel_attributes>OrtLand
+--
+
+--
++acomodarJugador(String, int, String): Resultado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>60</y><w>380</w><h>90</h></coordinates><panel_attributes>Juego
+--
+- nombre: String
+--
++ Juego(String)
++ obtenerDisponibilidadJuegos(): ArrayList&lt;DisponibilidadJuego&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>230</y><w>160</w><h>140</h></coordinates><panel_attributes>Mesa
+--
+- numero: int
+- cantMaxPart: int
+--
++ Mesa(int, int)
++ repartirCartas(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>460</y><w>170</w><h>90</h></coordinates><panel_attributes>Participante
+--
+- nombre: String
+- edad: int
+--
++ Participante(String, int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>140</y><w>70</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- mesas
+m1=0..n</panel_attributes><additional_attributes>10;90;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>90</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- juegos
+m1=0..n</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>360</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+- participantesJugando
+m1=0..n</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>250</y><w>140</w><h>180</h></coordinates><panel_attributes>Carta
+--
+- numero: int
+--
++Carta(int, PaloCarta)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>270</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- mazo
+m1=0..n</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>60</y><w>140</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+PaloCarta
+--
+_+ ORO_
+_+ ESPADA_
+_+ BASTO_
+_+ COPA_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>160</y><w>60</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- palo
+m1=1</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>320</y><w>200</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+- cartasEnLaMano
+m1=0..n</panel_attributes><additional_attributes>180;20;40;20;40;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>400</y><w>200</w><h>90</h></coordinates><panel_attributes>DisponibilidadJuego
+--
+- nombre: String
+- cantDisponible: int
+--
++ Disponibilidad(String, int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>140</y><w>100</w><h>280</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;260;10;10;80;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>210</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Resultado
+--
+_+ SIN_DISPONIBILIDAD_
+_+ JUEGO_NO_ENCONTRADO_
+_+ ASIGNACION_OK_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>140</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,74 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>270</x><y>340</y><w>240</w><h>190</h></coordinates><panel_attributes>Garage
+--
+- id: String
+
+--
++ Garage(String)
++ estacionarVehiculo(String): Resultado
++ mostrarVehiculosSinLlave(): void
++ esPersonaAutorizada(String): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>350</y><w>180</w><h>160</h></coordinates><panel_attributes>Vehiculo
+--
+- patente: String
+
+--
++ Vehiculo(String)
++ getMesesAdeudados(): int
++ imprimirPatente(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>330</y><w>150</w><h>150</h></coordinates><panel_attributes>Llave
+--
+
+
+--
++ Llave (String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1200</x><y>330</y><w>150</w><h>150</h></coordinates><panel_attributes>Etiqueta
+--
+- etiquetaPatente: String
+
+--
++ Etiqueta (String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>540</y><w>210</w><h>160</h></coordinates><panel_attributes>Tablero
+--
+
+--
++ Tablero()
++ devolverLlave(String): Llave</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>390</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- estacionados
+m1=0..n</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>450</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- noRetirados
+m1=0..n</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>390</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- llave
+m1=0..1</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1070</x><y>380</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- etiqueta
+m1=1</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>520</y><w>180</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+- tablero
+m1=1</panel_attributes><additional_attributes>160;100;10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>470</y><w>320</w><h>190</h></coordinates><panel_attributes>lt=&lt;-
+- llavesVehicEstacionados
+m1=0..n</panel_attributes><additional_attributes>160;10;160;170;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>70</y><w>370</w><h>150</h></coordinates><panel_attributes>OrtParking
+--
+
+--
++ obtenerInformeEstadoGarajes(): ArrayList&lt;EstadoGarage&gt;
++ mostrarVehiculosSinLlave(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>210</y><w>80</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+- garages
+m1=0..n</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>70</y><w>180</w><h>150</h></coordinates><panel_attributes>Persona
+--
+- nombre: Sring
+- dni: String
+
+--
++ Persona (String, String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>210</y><w>100</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+- autorizadas
+m1=0..n</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>660</y><w>200</w><h>150</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Resultado
+--
+_+ VEHICULO_NO_HABILITADO_
+_+ VEHICULO_YA_ESTACIONADO_
+_+ NO_ESTACIONA_ADEUDA_
+_+ INGRESO_OK_
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>520</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>370</y><w>170</w><h>150</h></coordinates><panel_attributes>EstadoGarage
+--
+- id: String
+- cantEstacionados: int
+
+--
++ EstadoGarage(String,int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>440</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element></diagram>

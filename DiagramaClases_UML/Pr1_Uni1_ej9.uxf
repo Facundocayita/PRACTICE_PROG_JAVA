@@ -1,0 +1,45 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>100</y><w>190</w><h>140</h></coordinates><panel_attributes>ORTify
+--
+
+--
++ ORTify()
++ agregarArtista(Artista): void
++ agregarUsuario(Usuario): void
++ borrarUsuario(String): Usuario</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>140</y><w>180</w><h>140</h></coordinates><panel_attributes>Cancion
+--
+- id: String
+- nombre: String
+- duracionSegundos: int
+--
++ Cancion(String, String, int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>110</y><w>260</w><h>170</h></coordinates><panel_attributes>Artista
+--
+- id: String
+- nombre: String
+_- CANT_CANCIONES: int = 5_
+--
++ Artista(String, String)
++ agregarCancion(Cancion): void
++ mostrarDuracionPromedio(): String
++ esFanDestacado(Usuario): boolean
++ primeras5Canciones(): ArrayList&lt;Cancion&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>150</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- canciones
+m1=0..n</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>150</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- artistas
+m1=0..n</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>310</y><w>260</w><h>170</h></coordinates><panel_attributes>Usuario
+--
+- id: String
+- nombre: String
+--
++ Usuario(String, String, EstadoUsuario)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>420</y><w>160</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EstadoUsuario
+--
+_+ HABILITADO_
+_+ PRUEBA_GRATIS_
+_+ SUSPENDIDO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>430</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- estado
+m1=1</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>230</y><w>230</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+- usuarios
+m1=0..n</panel_attributes><additional_attributes>210;130;10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>270</y><w>240</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+- usuariosLikearon
+m1=0..n</panel_attributes><additional_attributes>10;90;220;90;220;10</additional_attributes></element></diagram>

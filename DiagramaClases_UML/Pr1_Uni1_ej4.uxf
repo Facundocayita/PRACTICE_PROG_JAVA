@@ -1,0 +1,33 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>200</x><y>260</y><w>280</w><h>170</h></coordinates><panel_attributes>Droide
+--
+- nombre: String
+- droidesFueraServicio: ArrayList&lt;Droide&gt;
+- enServicio: boolean
+--
++ Droide(String)
++ agregarPieza(Pieza): void
+- piezaRota(): void
++ registrarDroideFueraServicio(Droide): void
++ autoRepararse(): ResultadoRepararse
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>260</y><w>160</w><h>180</h></coordinates><panel_attributes>Pieza
+--
+- nombre: String
+- operativa: boolean
+--
++ Pieza(String)
++ piezaRota(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>260</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- piezasOperativas
+m1=0..n</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>320</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- piezasNoOperativas
+m1=0..n</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>50</y><w>100</w><h>80</h></coordinates><panel_attributes>StarWars
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>120</y><w>80</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+- droides
+m1=0..n</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>520</y><w>200</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+ResultadoRepararse
+--
+_+ COMPLETAMENTE_OPERATIVO_
+_+ REPARACION_PARCIAL_
+_+ REPARACION_IMPOSIBLE_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>420</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>
